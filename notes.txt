@@ -1,0 +1,225 @@
+Data Structures and Algorithms
+
+Program is set of instructions which performs operation on Data
+
+How memory is organized.
+
+Data Structures is a way of organizing Data
+
+Algorithm is a set of steps to solve a problem
+
+Searching, Sorting, and other operations are performed using algorithms.
+
+Data Structures and Algorithms are fundamental concepts in computer science that help in organizing and processing data efficiently.
+
+Sample Data Structures:
+
+1. Arrays
+2. Linked Lists
+3. Stacks
+4. Queues
+5. Trees
+6. Graphs
+7. Hash Tables
+8. Tries
+9. Heaps
+10. Sets
+
+Sample Algorithms:
+
+1. Sorting Algorithms (e.g., Quick Sort, Merge Sort, Bubble Sort)
+2. Searching Algorithms (e.g., Binary Search, Linear Search)
+3. Graph Algorithms (e.g., Dijkstra's Algorithm, Depth-First Search, Breadth-First Search)
+4. Dynamic Programming Algorithms (e.g., Fibonacci Sequence, Knapsack Problem)
+5. Greedy Algorithms (e.g., Prim's Algorithm, Kruskal's Algorithm)
+6. Backtracking Algorithms (e.g., N-Queens Problem, Sudoku Solver)
+7. Divide and Conquer Algorithms (e.g., Merge Sort, Quick Sort)
+8. String Algorithms (e.g., KMP Algorithm, Rabin-Karp Algorithm)
+9. Mathematical Algorithms (e.g., Euclidean Algorithm for GCD, Sieve of Eratosthenes for prime numbers)
+10. Bit Manipulation Algorithms (e.g., Counting Set Bits, Finding Unique Elements)
+11. Tree Traversal Algorithms (e.g., Inorder, Preorder, Postorder Traversal)
+
+Concepts:
+
+Big O Notation: A mathematical notation used to describe the upper bound of an algorithm's time complexity, providing a high-level understanding of its efficiency.
+
+Time Complexity: A measure of the amount of time an algorithm takes to complete as a function of the length of the input.
+
+Space Complexity: A measure of the amount of memory an algorithm uses as a function of the length of the input.
+
+Recursion: A programming technique where a function calls itself to solve smaller instances of the same problem.
+
+Memory Management: The process of allocating and deallocating memory in a program, which is crucial for efficient data structure implementation.
+
+How to follow this course:
+
+Weekly schedule is important for consistent learning.
+
+Set aside specific times each week to focus on studying data structures and algorithms.
+
+Practice coding problems regularly to reinforce your understanding.
+
+Don't rush through the topics; take your time to understand each concept thoroughly.
+
+Big O Notation
+====================
+
+Big O Notation is a mathematical notation used to describe the upper bound of an algorithm's time complexity. 
+It provides a high-level understanding of how the algorithm's performance scales with the size of the input.
+
+Good Code: 
+- Run fast
+- Requires less memory
+- Readable, maintainable, scalable (Time dependent and Space dependent)
+
+Time Complexity
+====================
+Time Complexity is a measure of the amount of time an algorithm takes to complete as a function of the length of the input. 
+It helps in analyzing how the execution time of an algorithm grows with the size of the input data.
+
+Space Complexity: A measure of the amount of memory an algorithm uses as a function of the length of the input. 
+It is important to consider both time and space complexity when evaluating algorithms.
+Space Complexity is crucial for understanding how much memory an algorithm will consume, which can impact performance and scalability.
+
+Space Complexity is a measure of the amount of memory an algorithm uses as a function of the length of the input.
+
+Recursion
+
+Recursion is a programming technique where a function calls itself to solve smaller instances of the same problem.
+It is often used to solve problems that can be broken down into smaller, similar subproblems
+
+
+Complexity Analysis:
+
+1. Constant Time: O(1)
+   - The algorithm takes the same amount of time regardless of the input size.
+   - Example: Accessing an element in an array by index.
+
+2. Logarithmic Time: O(log n)
+   - The algorithm takes time proportional to the logarithm of the input size.
+   - Example: Binary search in a sorted array.
+
+3. Linear Time: O(n)
+    - The algorithm takes time proportional to the input size.
+    - Example: Iterating through all elements in an array.
+
+4. Linearithmic Time: O(n log n)
+    - The algorithm takes time proportional to n times the logarithm of n.
+    - Example: Efficient sorting algorithms like Merge Sort and Quick Sort.
+
+5. Quadratic Time: O(n^2)
+    - The algorithm takes time proportional to the square of the input size.
+    - Example: Nested loops iterating through an array.
+
+5. Cubic Time: O(n^3)
+   - The algorithm takes time proportional to the cube of the input size.
+   - Example: Triple nested loops iterating through a 3D matrix.
+
+6. Exponential Time: O(2^n)
+    - The algorithm takes time proportional to 2 raised to the power of the input size.
+    - Example: Recursive algorithms that solve problems by exploring all possible combinations, such as the Fibonacci sequence.
+
+7. Factorial Time: O(n!)
+    - The algorithm takes time proportional to the factorial of the input size.
+    - Example: Generating all permutations of a set of elements.
+
+8. Polynomial Time: O(n^k)
+    - The algorithm takes time proportional to a polynomial function of the input size.
+    - Example: Algorithms that involve nested loops where the number of iterations is a polynomial function of the input size.
+
+Memory 
+
+1 memory slot = 8 bits = 1 byte = 2^8 = 256 values
+
+Endianess : The order in which bytes are stored in memory. There are two types of endianness:
+- Big Endian: Most significant byte first
+- Little Endian: Least significant byte first
+
+
+Logarithm is the inverse operation to exponentiation, meaning it answers the question: "To what exponent must a base be raised to produce a given number?"
+For example, log base 2 of 8 is 3, because 2 raised to the power of 3 equals 8 (2^3 = 8). 
+
+Logarithm is usually base 2, but can also be base 10 or base e (natural logarithm).
+
+Data structure is a way of organizing data in a computer so that it can be used efficiently.
+
+Different data structures are suited for different kinds of applications, and some are highly specialized to specific tasks.
+
+Choosing the right data structure can greatly impact the efficiency and performance of an algorithm.
+
+Data structures can be classified into two main categories:
+
+1. Primitive Data Structures: These are the basic data types provided by programming languages, such as integers, floats, characters, and booleans.
+
+2. Non-Primitive Data Structures: These are more complex data structures that are built using primitive data types. They include arrays, linked lists, stacks, queues, trees, graphs, and hash tables.
+
+Data structures can also be categorized based on their organization and access patterns:
+
+1. Linear Data Structures: These data structures store elements in a sequential manner, where each element is connected to its previous and next element. Examples include arrays, linked lists, stacks, and queues.
+
+2. Non-Linear Data Structures: These data structures store elements in a hierarchical or interconnected manner, where elements can have multiple connections. Examples include trees and graphs.
+
+3. Static Data Structures: These data structures have a fixed size and cannot grow or shrink during runtime. Examples include arrays.
+
+4. Dynamic Data Structures: These data structures can grow or shrink in size during runtime, allowing for more flexibility. Examples include linked lists, stacks, queues, trees, and hash tables.
+
+Data structures can also be classified based on their access patterns:
+1. Sequential Access: Elements are accessed in a linear order, one after the other. Examples include arrays and linked lists.
+2. Random Access: Elements can be accessed directly using an index or key. Examples include arrays and hash tables.
+3. Hierarchical Access: Elements are accessed based on their relationships in a tree or graph structure. Examples include trees and graphs.
+Data structures are essential for efficient data management and manipulation in computer programs. They provide a way to store, organize, and retrieve data effectively, enabling algorithms to perform operations on that data efficiently.
+Data structures can also be classified based on their memory allocation:
+
+1. Contiguous Memory Allocation: Data structures that store elements in contiguous memory locations, such as arrays.
+2. Non-Contiguous Memory Allocation: Data structures that store elements in non-contiguous memory locations, such as linked lists and trees.
+Data structures can also be classified based on their operations:
+1. Mutable Data Structures: These data structures allow modification of their elements after creation. Examples include lists, sets, and dictionaries in Python.
+2. Immutable Data Structures: These data structures do not allow modification of their elements after creation. Examples include tuples and strings in Python.
+3. Persistent Data Structures: These data structures maintain previous versions of themselves when modified, allowing access to both the old and new versions. Examples include functional programming data structures like immutable lists and trees.
+
+Data structures can also be classified based on their usage patterns:
+1. Single-Threaded Data Structures: These data structures are designed for use in single-threaded
+
+applications, where only one thread accesses the data structure at a time. Examples include standard arrays and linked lists.
+
+2. Multi-Threaded Data Structures: These data structures are designed for concurrent access by multiple threads, providing mechanisms to handle synchronization and prevent data races. Examples include concurrent queues and thread-safe collections.
+
+Arrays
+
+items are stored in contiguous memory locations (One after another)
+
+2 types of arrays:
+
+Static Arrays: Fixed size, allocated at compile time. Cannot grow or shrink during runtime.
+
+Complexity of Static Arrays: O(1) for access, O(n) for insertion and deletion at arbitrary positions due to shifting elements.
+
+Dynamic Arrays: Can grow or shrink during runtime, allocated at runtime. Examples include Python lists and Java ArrayLists.
+
+Complexity of Dynamic Arrays: Best case: O(1) for insertion and deletion at the end. Worst case: O(n) for insertion and deletion at arbitrary positions due to shifting elements.
+
+Arrays Operation Complexity:
+
+1. Access: O(1) - Direct access to elements using an index.
+
+2. Update: O(1) - Direct access to elements using an index.
+
+3. Traversal: O(n) - Iterating through all elements in the array.
+
+4. Search: O(n) - Linear search through the array. O(log n) for binary search in a sorted array.
+
+5. Copy : O(n) - Copying all elements to a new array.
+
+6. Insert: O(n) - Inserting an element requires shifting elements to maintain order.
+
+7. Delete: O(n) - Deleting an element requires shifting elements to maintain order.
+
+Linked Lists
+
+Linked lists are a type of data structure where each element (node) contains a value and a reference (or pointer) to the next node in the sequence. This allows for dynamic memory allocation and efficient insertion and deletion operations.
+
+Linked lists can be classified into several types:
+1. Singly Linked Lists: Each node only contains a reference to the next node.
+2. Doubly Linked Lists: Each node contains references to both the previous and next nodes.
+3. Circular Linked Lists: The last node points back to the first node, forming a circular structure.
+
