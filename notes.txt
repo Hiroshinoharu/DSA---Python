@@ -223,3 +223,34 @@ Linked lists can be classified into several types:
 2. Doubly Linked Lists: Each node contains references to both the previous and next nodes.
 3. Circular Linked Lists: The last node points back to the first node, forming a circular structure.
 
+In memory canvas , linked lists are stored as a sequence of nodes, each containing a value and a reference to the next node. The nodes are not stored in contiguous memory locations, allowing for dynamic resizing.
+
+Complexity of Singly Linked Lists:
+1. Access: O(n) - Requires traversal from the head node to reach a specific node.
+2. Update: O(n) - Requires traversal to find the node to update.
+3. Traversal: O(n) - Iterating through all nodes in the linked list.
+4. Delete: O(n) - Requires traversal to find the node to delete, then updating the references.
+5. Search: O(n) - Linear search through the linked list.
+6. Insert: O(1) - Inserting at the head or tail is efficient, but O(n) if inserting at an arbitrary position due to traversal.
+
+Doubly Linked Lists:
+
+Doubly linked lists are a type of linked list where each node contains references to both the previous and next nodes. This allows for more efficient traversal in both directions and simplifies certain operations like deletion.
+
+Complexity of Doubly Linked Lists:
+1. Access: O(n) - Requires traversal from the head node to reach a specific node.
+2. Update: O(n) - Requires traversal to find the node to update.
+3. Traversal: O(n) - Iterating through all nodes in the doubly linked list.
+4. Delete: O(n) - Requires traversal to find the node to delete, then updating both previous and next references.
+5. Search: O(n) - Linear search through the doubly linked list.
+
+Cirtcular Linked Lists:
+
+Circular linked lists are a type of linked list where the last node points back to the first node, forming a circular structure. This allows for continuous traversal without reaching a null reference.
+
+Complexity of Circular Linked Lists:
+1. Access: O(n) - Requires traversal from the head node to reach a specific node.
+2. Update: O(n) - Requires traversal to find the node to update.
+3. Traversal: O(n) - Iterating through all nodes in the circular linked list.
+4. Delete: O(n) - Requires traversal to find the node to delete, then updating the references.
+5. Search: O(n) - Linear search through the circular linked list.
