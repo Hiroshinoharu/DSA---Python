@@ -254,3 +254,235 @@ Complexity of Circular Linked Lists:
 3. Traversal: O(n) - Iterating through all nodes in the circular linked list.
 4. Delete: O(n) - Requires traversal to find the node to delete, then updating the references.
 5. Search: O(n) - Linear search through the circular linked list.
+
+Stack:
+
+A stack is a linear data structure that follows the Last In First Out (LIFO) principle. Elements can be added (pushed) and removed (popped) from the top of the stack only.
+
+Think of a stack as a collection of items where the last item added is the first one to be removed, similar to a stack of plates where you can only take the top plate off.
+
+You can visualize a stack as a vertical collection of items, where you can only interact with the top item. The stack has two main operations: push to add an item and pop to remove the top item. Additionally, you can peek at the top item without removing it, and you can also keep track of the minimum and maximum items in the stack for quick access.
+
+A stack can be implemented as an array or a linked list. The key operations are:
+
+- Push: Add an element to the top of the stack.
+- Pop: Remove the top element from the stack.
+- Peek(Top): Return the top element without removing it.
+- Min: Return the minimum element in the stack.
+- Max: Return the maximum element in the stack.
+
+Min Stack: The min stack is a stack that keeps track of the minimum element at each level. It's used to efficiently retrieve the minimum element in constant time. When you push an element onto the min stack, you also check if it's smaller than the current minimum and update the minimum accordingly. When you pop an element, you also check if it was the minimum and update the minimum if necessary.
+
+Max Stack: Similar to the min stack, the max stack keeps track of the maximum element at each level. It allows you to retrieve the maximum element in constant time. When pushing an element, you check if it's larger than the current maximum and update it accordingly. When popping, you check if it was the maximum and update if necessary.
+
+Complexity:
+- Push: O(1) - adding an element to the top of the stack is a constant time operation.
+- Pop: O(1) - removing the top element is also a constant time operation.
+- Peek: O(1) - checking the top element without removing it is constant time.
+- Min: O(1) - retrieving the minimum element is constant time.
+- Max: O(1) - retrieving the maximum element is constant time.
+- Delete: O(1) - deleting the top element is constant time.
+
+Queue:
+
+A queue is a linear data structure that follows the First In First Out (FIFO) principle. Elements can be added (enqueued) at the back and removed (dequeued) from the front of the queue only.
+
+Think of a queue as a line of people waiting for service, where the first person in line is the first one to be served.
+
+You can visualize a queue as a horizontal collection of items, where you can add items to the back and remove items from the front. The queue has two main operations: enqueue to add an item and dequeue to remove the front item. Additionally, you can peek at the front item without removing it.
+
+A queue can be implemented as an array or a linked list. The key operations are:
+
+- Enqueue: Add an element to the back of the queue.
+- Dequeue: Remove the front element from the queue.
+- Peek(Front/Top): Return the front element without removing it.
+
+Complexity:
+- Enqueue: O(1) - adding an element to the back of the queue is a constant time operation. However, if the queue is implemented as an array and it's full, you may need to resize it, which can take O(n) time in that case.
+- Dequeue: O(1) - removing the front element is also a constant time operation unless resizing is needed. In that case, it's O(n) time.
+- Peek: O(1) - checking the front element without removing it is constant time.
+
+Hash Tables:
+
+Built-in hash tables are data structures that store key-value pairs, allowing for efficient data retrieval based on keys.
+
+They use a hash function to compute an index into an array of buckets or slots, from which the desired value can be found.
+
+Search Complexity:
+- Average Case: O(1) - searching for an element in a hash table is typically a constant time operation due to the use of hash functions.
+- Worst Case: O(n) - in cases of hash collisions, where multiple elements are mapped to the same index, the search time can degrade to linear time.
+- Best Case: O(1) - when there are no collisions, the search time is constant.
+
+Variable {Key: value}
+
+Hash tables are often implemented using arrays, where each index corresponds to a bucket that can hold multiple key-value pairs in case of collisions. The hash function is used to determine the index for each key.
+
+When a key-value pair is added, the hash function computes the index, and the pair is stored in the corresponding bucket. If a collision occurs (i.e., another key hashes to the same index), various strategies can be used to handle it, such as chaining (storing multiple pairs in a linked list at that index) or open addressing (finding another empty slot).
+
+Hash Tables collision resolution strategies:
+- Chaining: Each index in the hash table points to a linked list of entries that hash to the same index. When a collision occurs, the new entry is added to the linked list at that index.
+- Open Addressing: When a collision occurs, the algorithm searches for the next available slot in the array. This can be done using various probing techniques, such as linear probing, quadratic probing, or double hashing.
+- Linear Probing: If a collision occurs, the algorithm checks the next index in the array until it finds an empty slot.
+- Quadratic Probing: Similar to linear probing, but the step size increases quadratically (1, 4, 9, etc.) to reduce clustering.
+- Double Hashing: Uses a second hash function to determine the step size for probing, which helps to reduce clustering and improve distribution of entries.
+
+Hash tables are widely used in programming languages and libraries as built-in data structures, such as JavaScript objects, Python dictionaries, and Java HashMaps. They provide efficient key-value storage and retrieval, making them suitable for various applications like caching, indexing, and associative arrays.
+
+// Example of a simple hash table implementation in JavaScript
+class HashTable {
+    constructor() {
+        this.table = new Array(137); // Initialize an array of size 137
+    }
+    hash(key) {
+        let total = 0;
+        for (let char of key) {
+            total += char.charCodeAt(0);
+        }
+        return total % this.table.length; // Return the index based on the hash function
+    }
+
+    set(key, value) {
+        const index = this.hash(key);
+        if (!this.table[index]) {
+            this.table[index] = [];
+        }
+        // Check for existing key and update value if found
+        for (let i = 0; i < this.table[index].length; i++) {
+            if (this.table[index][i][0] === key) {
+                this.table[index][i][1] = value;
+                return;
+            }
+        }
+        // If key not found, add new key-value pair
+        this.table[index].push([key, value]);
+    }
+
+    get(key) {
+        const index = this.hash(key);
+        if (this.table[index]) {
+            for (let i = 0; i < this.table[index].length; i++) {
+                if (this.table[index][i][0] === key) {
+                    return this.table[index][i][1]; // Return the value if key is found
+                }
+            }
+        }
+        return undefined; // Return undefined if key is not found
+    }
+
+    remove(key) {
+        const index = this.hash(key);
+        if (this.table[index]) {
+            for (let i = 0; i < this.table[index].length; i++) {
+                if (this.table[index][i][0] === key) {
+                    this.table[index].splice(i, 1); // Remove the key-value pair
+                    return true; // Return true if removed successfully
+                }
+            }
+        }
+        return false; // Return false if key was not found
+    }
+   
+    keys() {
+        const keysArray = [];
+        for (let bucket of this.table) {
+            if (bucket) {
+                for (let pair of bucket) {
+                    keysArray.push(pair[0]); // Collect all keys
+                }
+            }
+        }
+        return keysArray; // Return an array of all keys
+    }
+
+    values() {
+        const valuesArray = [];
+        for (let bucket of this.table) {
+            if (bucket) {
+                for (let pair of bucket) {
+                    valuesArray.push(pair[1]); // Collect all values
+                }
+            }
+        }
+        return valuesArray; // Return an array of all values
+    }
+
+    clear() {
+        this.table = new Array(137); // Reset the hash table
+    }
+
+    size() {
+        let count = 0;
+        for (let bucket of this.table) {
+            if (bucket) {
+                count += bucket.length; // Count all key-value pairs
+            }
+        }
+        return count; // Return the total number of key-value pairs
+    }
+
+    isEmpty() {
+        return this.size() === 0; // Check if the hash table is empty
+    }
+}
+
+// Example usage of the HashTable class
+const hashTable = new HashTable();
+hashTable.set("name", "Alice");
+hashTable.set("age", 30);
+console.log(hashTable.get("name")); // Output: Alice
+console.log(hashTable.get("age")); // Output: 30
+console.log(hashTable.keys()); // Output: ["name", "age"]
+console.log(hashTable.values()); // Output: ["Alice", 30]
+// Clear the hash table
+hashTable.clear();
+// Check if the hash table is empty
+console.log(hashTable.isEmpty()); // Output: true
+
+Hash table Complexity:
+- Set: O(1) on average, O(n) in the worst case due to collisions.
+- Get: O(1) on average, O(n) in the worst case due to collisions.
+- Remove: O(1) on average, O(n) in the worst case due to collisions.
+- Keys: O(n) - iterating through all keys in the hash table.
+- Values: O(n) - iterating through all values in the hash table.
+- Clear: O(1) - resetting the hash table.
+
+Tree:
+
+A tree is a data structure composed of nodes, where each node has a value and zero or more child nodes.
+The top node is called the root, and nodes with no children are called leaves.
+Trees are used to represent hierarchical relationships.
+
+A tree can be visualized as an inverted tree structure, where the root is at the top and branches extend downwards.
+Each node can have multiple children, but each child has only one parent, except for the root which has no parent.
+
+Node - Node is the basic unit of a tree, containing a value and references to its children.
+Root - The topmost node in a tree, which has no parent.
+Parent - A node that has one or more children.
+Child - A node that is directly connected to another node when moving away from the root.
+Leaf - A node that has no children, representing the end of a branch in the tree.
+Sibling - Nodes that share the same parent are called siblings.
+edge - The connection between two nodes in a tree is called an edge.
+levels - The depth of a node is the number of edges from the root to that node. The root is at level 0, its children are at level 1, and so on.
+Subtree - A subtree is a tree formed by a node and all its descendants. Each node in a tree can be considered the root of a subtree.
+Path - A path in a tree is a sequence of nodes and edges connecting a node with a descendant. The path from the root to a leaf is often referred to as the tree's height.
+
+Types of Trees:
+- Binary Tree: Each node has at most two children, referred to as the left and right child.
+- Binary Search Tree (BST): A binary tree where the left child is less than the parent node and the right child is greater than the parent node. This property allows for efficient searching, insertion, and deletion operations.
+- Balanced Tree: A tree where the height of the left and right subtrees of any node differ by at most one. Examples include AVL trees and Red-Black trees.
+- N-ary Tree: A tree where each node can have up to N children. This is a generalization of binary trees.
+- Trie: A specialized tree used for storing strings, where each node represents a character of a string. It is commonly used for autocomplete and spell-checking applications.
+
+Binary Tree:
+
+A binary tree is a tree data structure where each node has at most two children, referred to as the left child and the right child.
+The root node is the topmost node in the tree, and it has no parent.
+A binary tree can be visualized as a hierarchical structure where each node can have up to two branches extending downwards. The left child is typically less than the parent node, and the right child is greater than the parent node in a binary search tree (BST).
+
+Types of Binary Trees:
+
+- Full Binary Tree: Every node has either 0 or 2 children. All leaves are at the same level.
+- Complete Binary Tree: Every node has either 0 or 2 children, and all levels are fully filled except possibly for the last level, which is filled from left to right.
+- Perfect Binary Tree: All internal nodes have two children, and all leaves are at the same level. The number of nodes at each level doubles as you move down the tree.
+- Balanced Binary Tree: A binary tree where the height of the left and right subtrees of any node differ by at most one. This ensures that the tree remains balanced, allowing for efficient operations.
+- Unbalanced Binary Tree: A binary tree where the height of the left and right subtrees of any node can differ by more than one, leading to inefficient operations.
