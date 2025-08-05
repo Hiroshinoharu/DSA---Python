@@ -609,3 +609,55 @@ Elements with higher priority are dequeued before elements with lower priority, 
 Priority queues can be implemented using heaps, where the highest (or lowest) priority element is always at the root of the heap. 
 
 This allows for efficient insertion and deletion operations.
+
+Priority Queue Operations:
+- Enqueue: O(log n) - Adding an element to the priority queue while maintaining the heap property.
+- Dequeue: O(log n) - Removing the highest (or lowest) priority element from the priority queue while maintaining the heap property.
+- Peek: O(1) - Accessing the highest (or lowest) priority element without removing it.
+- Change Priority: O(log n) - Changing the priority of an element in the priority queue while maintaining the heap property.
+
+Trie:
+A trie, also known as a prefix tree, is a tree-like data structure that is often used for storing strings or sequences of characters.
+
+It is particularly useful for applications like autocomplete, spell-checking, and IP routing.
+
+A trie consists of nodes, where each node represents a character in a string. 
+
+The root node is empty, and each path from the root to a leaf node represents a unique string stored in the trie.
+
+Each node can have multiple children, and the edges between nodes represent the characters in the strings.
+
+Trie Operations:
+- Insertion: O(m) - Inserting a string of length m into the trie.
+- Search: O(m) - Searching for a string of length m in the trie.
+- Deletion: O(m) - Deleting a string of length m from the trie.
+- Autocomplete: O(m + k) - Finding all strings that start with a given prefix of length m, where k is the number of matching strings.
+- Prefix Search: O(m) - Searching for all strings that start with a given prefix of length m.
+- Traversal: O(n) - Traversing all nodes in the trie, where n is the total number of characters in all strings stored in the trie.
+- Count: O(n) - Counting the total number of strings stored in the trie, where n is the total number of characters in all strings.
+- Longest Common Prefix: O(m) - Finding the longest common prefix of all strings stored in the trie, where m is the length of the prefix.
+- Longest Common Substring: O(m) - Finding the longest common substring of all strings stored in the trie, where m is the length of the substring.
+- Longest Common Subsequence: O(m) - Finding the longest common subsequence of all strings stored in the trie, where m is the length of the subsequence.
+
+Graphs:
+
+A graph is a non-linear data structure consisting of nodes or vertices connected by edges.
+
+Graphs can be directed or undirected, weighted or unweighted, and can represent various relationships between entities.
+
+It represents a collection of vertices (nodes) and edges (connections between nodes).
+
+Graphs can be visualized as a set of points (vertices) connected by lines (edges). Each vertex can represent an entity, and each edge can represent a relationship between those entities.
+
+Types of Graphs:
+1. Directed Graph (Digraph): A graph where edges have a direction, meaning they go from one vertex to another. 
+The edges are represented as ordered pairs (u, v), where u is the source vertex and v is the destination vertex.
+
+2. Undirected Graph: A graph where edges do not have a direction, meaning they connect two vertices without a specific order. 
+The edges are represented as unordered pairs {u, v}.
+
+3. Weighted Graph: A graph where edges have weights or costs associated with them.
+The weight can represent distance, time, or any other metric. The edges are represented as pairs (u, v, w), 
+where w is the weight of the edge connecting vertices u and v.
+
+4. Unweighted Graph: A graph where edges do not have weights, meaning all edges are considered equal in terms of cost or distance.
