@@ -650,6 +650,7 @@ It represents a collection of vertices (nodes) and edges (connections between no
 Graphs can be visualized as a set of points (vertices) connected by lines (edges). Each vertex can represent an entity, and each edge can represent a relationship between those entities.
 
 Types of Graphs:
+
 1. Directed Graph (Digraph): A graph where edges have a direction, meaning they go from one vertex to another. 
 The edges are represented as ordered pairs (u, v), where u is the source vertex and v is the destination vertex.
 
@@ -661,3 +662,61 @@ The weight can represent distance, time, or any other metric. The edges are repr
 where w is the weight of the edge connecting vertices u and v.
 
 4. Unweighted Graph: A graph where edges do not have weights, meaning all edges are considered equal in terms of cost or distance.
+
+5. Cyclic Graph: A graph that contains at least one cycle, meaning there is a path that starts and ends at the same vertex.
+
+6. Acyclic Graph: A graph that does not contain any cycles, meaning there is no path that starts and ends at the same vertex.
+
+Recursion is a technique used in programming where a function calls itself in its definition.
+This allows the function to solve problems by breaking them down into smaller, more manageable subproblems.
+Each recursive call typically works on a smaller piece of the original problem until it reaches a base case, which is a condition that stops the recursion.
+
+Base Case this is the condition under which the recursion stops.
+It is the smallest possible input for which the function can return a result without calling itself.
+
+Recursion control Flow
+When a recursive function is called, the current state of the function is saved on the call stack
+until the base case is reached. Once the base case is hit, the function starts returning values back through the call stack, unwinding each layer of recursion.
+
+Recursion can be very powerful, but it can also lead to issues like stack overflow if the recursion depth is too high or if the base case is not defined correctly.
+Here is an example of a simple recursive function that calculates the factorial of a number:
+
+
+def factorial(n):
+    # Base case: if n is 0, return 1
+    if n == 0:
+        return 1
+    # Recursive case: call the function with n-1
+    else:
+        return n * recursion_example(n - 1)
+
+Tracing Tree for Recursion
+
+def recursion_example(n):
+    # Base case: if n is 0, return 1
+    if n == 0:
+        return 1
+    # Recursive case: call the function with n-1
+    else:
+        return n * recursion_example(n - 1)
+
+# Example of tracing the recursion tree for factorial(3)
+# The function calls will look like this:
+# factorial(3)
+#   -> factorial(2)
+#     -> factorial(1)
+#       -> factorial(0)
+#         -> returns 1
+#       -> returns 1 * 1 = 1
+#     -> returns 2 * 1 = 2
+#   -> returns 3 * 2 = 6
+
+Algorithm: Searching
+
+Linear Search: A simple search algorithm that checks each element in a list sequentially until the target element is found or the end of the list is reached.
+- Time Complexity: O(n) - In the worst case, it may need to check every element in the list.
+- Space Complexity: O(1) - It uses a constant amount of space.
+
+Binary Search: A more efficient search algorithm that works on sorted lists by repeatedly dividing the search interval in half.
+- Time Complexity: O(log n) - It reduces the search space by half with each iteration.
+- Space Complexity: O(1) - It uses a constant amount of space.
