@@ -720,3 +720,8 @@ Linear Search: A simple search algorithm that checks each element in a list sequ
 Binary Search: A more efficient search algorithm that works on sorted lists by repeatedly dividing the search interval in half.
 - Time Complexity: O(log n) - It reduces the search space by half with each iteration.
 - Space Complexity: O(1) - It uses a constant amount of space.
+
+Algorithm: Sorting
+
+Sorting is a process of arranging elements in a specific order, typically in ascending or descending order. 
+There are various sorting algorithms, each with different time and space complexities.
