@@ -725,3 +725,55 @@ Algorithm: Sorting
 
 Sorting is a process of arranging elements in a specific order, typically in ascending or descending order. 
 There are various sorting algorithms, each with different time and space complexities.
+
+1. Bubble Sort: A simple comparison-based sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.
+   - Time Complexity: O(n^2) - In the worst case, it may need to compare every element with every other element.
+   - Space Complexity: O(1) - It uses a constant amount of space.
+
+2. Selection Sort: A comparison-based sorting algorithm that divides the input list into two parts: a sorted part and an unsorted part. It repeatedly selects the smallest (or largest) element from the unsorted part and moves it to the end of the sorted part.
+   - Time Complexity: O(n^2) - It may need to compare every element with every other element.
+   - Space Complexity: O(1) - It uses a constant amount of space.
+
+3. Insertion Sort: A comparison-based sorting algorithm that builds the final sorted array one item at a time. It takes each element from the input and finds the appropriate position in the sorted part of the array.
+   - Time Complexity: O(n^2) - In the worst case, it may need to compare every element with every other element.
+   - Space Complexity: O(1) - It uses a constant amount of space.
+
+4. Merge Sort: A divide-and-conquer sorting algorithm that divides the input array into two halves, sorts each half recursively, and then merges the sorted halves.
+   - Time Complexity: O(n log n) - It divides the array in half log n times and takes linear time to merge.
+   - Space Complexity: O(n) - It requires additional space for the temporary arrays used during merging.
+
+5. Quick Sort: A divide-and-conquer sorting algorithm that selects a "pivot" element and partitions the array into two halves: elements less than the pivot and elements greater than the pivot. It then recursively sorts the two halves.
+   - Time Complexity: O(n log n) - On average, it performs well, but in the worst case (e.g., already sorted array), it can degrade to O(n^2).
+   - Space Complexity: O(log n) - It requires additional space for the recursive call stack.
+
+Steps for Insertion Sort:
+
+1. Start with the second element (index 1) as the key.
+2. Compare the key with the elements in the sorted part (to the left).
+3. Shift all elements larger than the key to the right.
+4. Insert the key in its correct position.
+5. Repeat for all elements.
+
+Steps for Selection Sort:
+
+1. Start with the first element as the minimum.
+2. Compare the minimum with the next elements and update the minimum if a smaller element is found.
+3. Swap the minimum element with the first element.
+4. Repeat for the remaining elements.
+
+Steps for Bubble Sort:
+
+1. Compare adjacent elements and swap them if they are in the wrong order.
+2. Repeat the process for all elements until no swaps are needed.
+
+Conditions for Quick Sort:
+
+1. The array must be partitioned into two halves.
+2. Elements less than the pivot go to the left, and elements greater than the pivot go to the right.
+3. The pivot element is placed in its correct position.
+4. The process is applied recursively to the left and right sub-arrays.
+
+Steps for Merge Sort:
+
+1. Divide the unsorted list into n sub-lists, each containing one element.
+2. Repeatedly merge sub-lists to produce new sorted sub-lists until there is only one sub-list remaining.
