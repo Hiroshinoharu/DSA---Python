@@ -777,3 +777,11 @@ Steps for Merge Sort:
 
 1. Divide the unsorted list into n sub-lists, each containing one element.
 2. Repeatedly merge sub-lists to produce new sorted sub-lists until there is only one sub-list remaining.
+
+Tree Traversal
+
+Tree traversal is the process of visiting all the nodes in a tree data structure in a specific order. There are several methods for traversing a tree, including:
+
+1. In-order Traversal: Visit the left subtree, the current node, and then the right subtree. (LNR)
+2. Pre-order Traversal: Visit the current node, the left subtree, and then the right subtree. (NLR)
+3. Post-order Traversal: Visit the left subtree, the right subtree, and then the current node. (LRN)
