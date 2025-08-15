@@ -1,0 +1,41 @@
+Graph Traversal
+
+A graph traversal algorithm is a method for visiting each node in a graph. There are two main types of graph traversal algorithms:
+
+1. Depth-First Search (DFS)
+2. Breadth-First Search (BFS)
+
+Depth-First Search (DFS):
+
+DFS is a traversal algorithm that explores as far as possible along each branch before backtracking. It can be implemented using recursion or a stack.
+1. Start at the root node (or any arbitrary node).
+2. Mark the node as visited.
+3. Visit an unvisited adjacent node.
+4. Repeat steps 2-3 until all nodes are visited or no unvisited adjacent nodes remain.
+5. Backtrack to the previous node and repeat the process until all nodes are visited.
+
+Breadth-First Search (BFS):
+BFS is a traversal algorithm that explores all the neighbor nodes at the present depth prior to moving on to nodes at the next depth level. It can be implemented using a queue.
+
+1. Start at the root node (or any arbitrary node).
+2. Mark the node as visited.
+3. Enqueue the node into a queue.
+4. While the queue is not empty:
+   a. Dequeue a node from the front of the queue.
+   b. Visit all unvisited adjacent nodes, mark them as visited, and enqueue them.
+5. Repeat step 4 until the queue is empty.
+
+Graph Representation:
+Graphs can be represented in several ways, the most common being:
+1. Adjacency Matrix: A 2D array where the cell at row i and column j indicates whether there is an edge between node i and node j.
+2. Adjacency List: An array of lists where each list at index i contains the nodes adjacent to node i.
+3. Edge List: A list of edges where each edge is represented as a pair of nodes.
+
+Complexity of Traversal Algorithms:
+- DFS:
+  - Time Complexity: O(V + E) where V is the number of vertices and E is the number of edges.
+  - Space Complexity: O(V) for the recursion stack or O(V) for the stack used in the iterative version.
+
+- BFS:
+  - Time Complexity: O(V + E) where V is the number of vertices and E is the number of edges.
+  - Space Complexity: O(V) for the queue used in the algorithm.

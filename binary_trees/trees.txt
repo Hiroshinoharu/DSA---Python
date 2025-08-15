@@ -1,0 +1,49 @@
+
+Preorder Traversal:
+
+1. Visit the root node (A)
+2. Traverse the left subtree in preorder
+3. Traverse the right subtree in preorder
+
+Postorder Traversal:
+1. Traverse the left subtree in postorder
+2. Traverse the right subtree in postorder
+3. Visit the root node (A)
+
+Complexity: O(n) where n is the number of nodes in the tree.
+
+Inorder Traversal:
+1. Traverse the left subtree in inorder
+2. Visit the root node (A)
+3. Traverse the right subtree in inorder
+
+Complexity: O(n) where n is the number of nodes in the tree.
+
+Breadth First Search (BFS)
+1. Visit the root node (A)
+2. Visit all nodes at the current level (B, C)
+3. Visit all nodes at the next level (D, E, F)
+4. Visit all nodes at the next level (G, H, I, J)
+
+Level Order Traversal:
+1. Visit the root node (A)
+2. Visit all nodes at the current level (B, C)
+3. Visit all nodes at the next level (D, E, F)
+4. Visit all nodes at the next level (G, H, I, J)
+
+Depth First Search (DFS)
+1. Visit the root node (A)
+2. Traverse the left subtree in DFS
+3. Traverse the right subtree in DFS
+
+// Example tree structure
+A
+├── B
+│   ├── D
+│   └── E
+│       ├── G
+│       └── H
+│           └── I
+└── C
+    └── F
+        └── J
