@@ -1,18 +1,18 @@
 
-Preorder Traversal:
+Preorder Traversal (NLR):
 
 1. Visit the root node (A)
 2. Traverse the left subtree in preorder
 3. Traverse the right subtree in preorder
 
-Postorder Traversal:
+Postorder Traversal (LRN):
 1. Traverse the left subtree in postorder
 2. Traverse the right subtree in postorder
 3. Visit the root node (A)
 
 Complexity: O(n) where n is the number of nodes in the tree.
 
-Inorder Traversal:
+Inorder Traversal (LNR) :
 1. Traverse the left subtree in inorder
 2. Visit the root node (A)
 3. Traverse the right subtree in inorder
