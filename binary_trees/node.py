@@ -21,6 +21,9 @@ class Queue():
             return self.items[0]
         return None
 
+    def is_empty(self):
+        return len(self.items) == 0
+
 class BinaryTree():
     def __init__(self,value) -> None:
         self.root = Node(value)
@@ -62,14 +65,16 @@ class BinaryTree():
         
         queue = Queue()
         traversal = []
+        queue.enqueue(start)
         
         while len(queue.items) > 0:
-            traversal.append(queue.peek())
             node = queue.dequeue()
-            if node.left is not None:
-                queue.enqueue(node.left)
-            if node.right is not None:
-                queue.enqueue(node.right)
+            if node is not None:
+                traversal.append(node.value)
+                if node.left is not None:
+                    queue.enqueue(node.left)
+                if node.right is not None:
+                    queue.enqueue(node.right)
         return traversal
 
 tree = BinaryTree(3)
