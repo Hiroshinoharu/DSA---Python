@@ -33,13 +33,21 @@ def qshelper(arr, start, end):
     right = end
 
     while left <= right:
+        # Move the left pointer to the right as long as elements are less than or equal to the pivot
+        # Move the right pointer to the left as long as elements are greater than or equal to the pivot
         if arr[left] > arr[pivot] and arr[right] < arr[pivot]:
             arr[left], arr[right] = arr[right], arr[left]
+        # Increment left pointer if element is in correct position
         if arr[left] <= arr[pivot]:
             left += 1
+        # Decrement right pointer if element is in correct position
         if arr[right] >= arr[pivot]:
             right -= 1
+    
+    # Swap the pivot element with the element at the right pointer
     arr[pivot], arr[right] = arr[right], arr[pivot]
+    
+    # Recursively apply quicksort to the left and right partitions
     qshelper(arr, start, right - 1)
     qshelper(arr, right + 1, end)
 

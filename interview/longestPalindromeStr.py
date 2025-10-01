@@ -19,6 +19,7 @@ class Solution:
         while left >= 0 and right < len(s) and s[left] == s[right]:
             left -= 1
             right += 1
+            print(s[left + 1:right])
         return s[left + 1:right]
 
 # Example usage
